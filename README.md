@@ -140,16 +140,19 @@ http://127.0.0.1:5000
 
 ---
 
-# 🔄 Automatic Model Download
+## 🔄 Automatic Model Download
 
-When the application starts:
+When the application starts, it automatically checks whether the trained model is available locally.
 
-1️⃣ It checks whether the model exists locally
-2️⃣ If the model is missing, it automatically downloads the model from **Google Drive**
-3️⃣ The model is saved into the `models/` directory
-4️⃣ TensorFlow loads the model and starts predictions
+If the model is not found, the system performs the following steps:
 
-This approach keeps the GitHub repository **lightweight** and avoids GitHub file size limits.
+1. Checks whether the model file exists in the `models/` directory.
+2. If the model is missing, it automatically downloads the model from **Google Drive**.
+3. The downloaded model is stored inside the `models/` folder.
+4. **TensorFlow** then loads the model and the application becomes ready to perform predictions.
+
+This approach keeps the GitHub repository **lightweight** and avoids GitHub's file size limitations while still allowing the application to run normally.
+
 
 ---
 
