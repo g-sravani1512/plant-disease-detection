@@ -1,0 +1,12 @@
+seaborn
+scikit-learn
+matplotlib
+pandas
+flask
+tensorflow
+pillow
+numpy
+fpdf
+gdown
+reportlab
+

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - PlantCare AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/working.css') }}">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="{{ url_for('static', filename='images/icons/logo-leaf.svg') }}" alt="PlantCare AI" class="logo-image">
+                <span class="logo-text">PlantCare AI</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/#features" class="nav-link">Features</a></li>
+                <li><a href="/#upload" class="nav-link">Scan</a></li>
+                <li><a href="/#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="/working" class="nav-link active">Learn More</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="working-hero">
+        <div class="container">
+            <h1>Understanding the Technology</h1>
+            <p>Discover how AI and deep learning power our plant disease detection system</p>
+        </div>
+    </section>
+
+    <!-- Working Section -->
+    <section class="working-section">
+        <div class="container">
+
+            <!-- Architecture Overview -->
+            <div class="working-card">
+                <div class="card-header">
+                    <div class="card-icon-wrapper">
+                        <img src="{{ url_for('static', filename='images/icons/ai-icon.png') }}" alt="Architecture">
+                    </div>
+                    <h2>System Architecture</h2>
+                </div>
+                <div class="card-content">
+                    <p>Our plant disease detection system uses a sophisticated deep learning pipeline that combines modern web technologies with advanced neural networks.</p>
+                    
+                    <div class="architecture-flow">
+                        <div class="flow-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Image Input</h4>
+                                <p>User uploads leaf image via web or camera</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Preprocessing</h4>
+                                <p>Image resized to 224×224 and normalized</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>CNN Analysis</h4>
+                                <p>InceptionV3 processes the image</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Prediction</h4>
+                                <p>Disease classification with confidence</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flow-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Results</h4>
+                                <p>Display diagnosis and recommendations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CNN Overview -->
+            <div class="working-card">
+                <div class="card-header">
+                    <div class="card-icon-wrapper">
+                        <img src="{{ url_for('static', filename='images/icons/ai-icon.png') }}" alt="Neural Network">
+                    </div>
+                    <h2>Convolutional Neural Network (CNN)</h2>
+                </div>
+                <div class="card-content">
+                    <p>CNNs are specialized neural networks designed for processing visual data. They automatically learn hierarchical patterns in images, making them ideal for disease detection.</p>
+                    
+                    <div class="tech-details">
+                        <div class="tech-point">
+                            <div class="tech-icon">🔍</div>
+                            <h4>Convolutional Layers</h4>
+                            <p>Extract features like edges, textures, and patterns from leaf images</p>
+                        </div>
+                        <div class="tech-point">
+                            <div class="tech-icon">📊</div>
+                            <h4>Pooling Layers</h4>
+                            <p>Reduce spatial dimensions while retaining important information</p>
+                        </div>
+                        <div class="tech-point">
+                            <div class="tech-icon">🎯</div>
+                            <h4>Dense Layers</h4>
+                            <p>Combine features to make final disease classification decisions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- InceptionV3 Model -->
+            <div class="working-card highlight-card">
+                <div class="card-header">
+                    <div class="card-icon-wrapper">
+                        <img src="{{ url_for('static', filename='images/icons/research-icon.png') }}" alt="InceptionV3">
+                    </div>
+                    <h2>InceptionV3 Architecture</h2>
+                </div>
+                <div class="card-content">
+                    <p>InceptionV3 is a powerful deep learning architecture developed by Google. It uses innovative "Inception modules" that process images at multiple scales simultaneously.</p>
+                    
+                    <div class="inception-features">
+                        <div class="feature-box">
+                            <h4>🔍 Multi-Scale Processing</h4>
+                            <p>Analyzes leaf features at different resolutions for comprehensive disease detection</p>
+                        </div>
+                        <div class="feature-box">
+                            <h4>⚡ Efficient Computation</h4>
+                            <p>Optimized architecture delivers fast predictions without sacrificing accuracy</p>
+                        </div>
+                        <div class="feature-box">
+                            <h4>📊 High Accuracy</h4>
+                            <p>Pre-trained on millions of images, fine-tuned for plant disease classification</p>
+                        </div>
+                        <div class="feature-box">
+                            <h4>🎓 Transfer Learning</h4>
+                            <p>Leverages knowledge from ImageNet to recognize complex disease patterns</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Processing Pipeline -->
+            <div class="working-card">
+                <div class="card-header">
+                    <div class="card-icon-wrapper">
+                        <img src="{{ url_for('static', filename='images/icons/speed-icon.png') }}" alt="Pipeline">
+                    </div>
+                    <h2>Image Processing Pipeline</h2>
+                </div>
+                <div class="card-content">
+                    <div class="pipeline-steps">
+                        <div class="pipeline-step">
+                            <div class="step-icon">📥</div>
+                            <div class="step-info">
+                                <h4>1. Image Acquisition</h4>
+                                <p>User uploads image (file or camera capture) → Image validated for format and size</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pipeline-step">
+                            <div class="step-icon">🔄</div>
+                            <div class="step-info">
+                                <h4>2. Preprocessing</h4>
+                                <p>Convert to RGB → Resize to 224×224 pixels → Normalize pixel values (0-1 range)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pipeline-step">
+                            <div class="step-icon">🤖</div>
+                            <div class="step-info">
+                                <h4>3. Model Inference</h4>
+                                <p>Feed preprocessed image into InceptionV3 → Forward propagation through layers → Extract predictions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pipeline-step">
+                            <div class="step-icon">📊</div>
+                            <div class="step-info">
+                                <h4>4. Post-processing</h4>
+                                <p>Apply softmax to get probabilities → Select highest confidence prediction → Map to disease name</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pipeline-step">
+                            <div class="step-icon">📋</div>
+                            <div class="step-info">
+                                <h4>5. Result Generation</h4>
+                                <p>Retrieve disease information → Display symptoms and remedies → Generate PDF report</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technology Stack -->
+            <div class="working-card">
+                <div class="card-header">
+                    <div class="card-icon-wrapper">
+                        <img src="{{ url_for('static', filename='images/icons/accuracy-icon.png') }}" alt="Technology">
+                    </div>
+                    <h2>Technology Stack</h2>
+                </div>
+                <div class="card-content">
+                    <div class="tech-stack">
+                        <div class="stack-category">
+                            <h4>Frontend</h4>
+                            <ul>
+                                <li><strong>HTML5:</strong> Structure and semantic markup</li>
+                                <li><strong>CSS3:</strong> Modern styling with animations</li>
+                                <li><strong>JavaScript:</strong> Interactive functionality</li>
+                                <li><strong>Canvas API:</strong> Camera capture and processing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stack-category">
+                            <h4>Backend</h4>
+                            <ul>
+                                <li><strong>Flask:</strong> Python web framework</li>
+                                <li><strong>TensorFlow:</strong> Deep learning framework</li>
+                                <li><strong>ReportLab:</strong> PDF generation</li>
+                                <li><strong>PIL/Pillow:</strong> Image processing</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stack-category">
+                            <h4>Machine Learning</h4>
+                            <ul>
+                                <li><strong>Model:</strong> InceptionV3 CNN</li>
+                                <li><strong>Input:</strong> 224×224 RGB images</li>
+                                <li><strong>Output:</strong> Multi-class probabilities</li>
+                                <li><strong>Framework:</strong> Keras/TensorFlow</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why It Works -->
+            <div class="working-card benefits-card">
+                <div class="card-header">
+                    <div class="card-icon-wrapper">
+                        <img src="{{ url_for('static', filename='images/icons/research-icon.png') }}" alt="Success">
+                    </div>
+                    <h2>Why This Approach Works</h2>
+                </div>
+                <div class="card-content">
+                    <div class="benefits-grid">
+                        <div class="benefit">
+                            <div class="benefit-icon">🎯</div>
+                            <h4>High Accuracy</h4>
+                            <p>Deep learning models achieve over 95% accuracy in disease classification</p>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">⚡</div>
+                            <h4>Real-time Processing</h4>
+                            <p>Optimized model provides instant results for practical field use</p>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">📚</div>
+                            <h4>Continuous Learning</h4>
+                            <p>Model updates with new disease types and training data</p>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">🌍</div>
+                            <h4>Accessibility</h4>
+                            <p>Web-based interface works on any device with a camera</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <div class="back-button-container">
+                <a href="/" class="btn btn-primary btn-back">
+                    ← Back to Home
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="{{ url_for('static', filename='images/icons/logo-leaf.svg') }}" alt="PlantCare AI">
+                        <span>PlantCare AI</span>
+                    </div>
+                    <p>AI-powered plant disease detection for healthier plants and better yields.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/#features">Features</a></li>
+                        <li><a href="/#how-it-works">How It Works</a></li>
+                        <li><a href="/working">Technology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="/#instructions">Guidelines</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PlantCare AI. Powered by Deep Learning & InceptionV3.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

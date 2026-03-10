@@ -1,0 +1,5 @@
+Total Images: 54305
+Training Images: 43444
+Validation Images: 10861
+Train Ratio: 0.8
+Validation Ratio: 0.2

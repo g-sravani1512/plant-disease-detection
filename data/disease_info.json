@@ -1,0 +1,229 @@
+{
+  "Apple___Apple_scab": {
+    "description": "Apple scab is a fungal disease caused by Venturia inaequalis, affecting leaves and fruits.",
+    "symptoms": ["Dark scabby lesions on leaves", "Premature leaf fall", "Deformed fruits"],
+    "remedies": ["Apply fungicides", "Remove infected leaves", "Ensure proper air circulation"]
+  },
+
+  "Apple___Black_rot": {
+    "description": "Black rot is a fungal disease caused by Botryosphaeria obtusa affecting apples.",
+    "symptoms": ["Purple spots on leaves", "Black concentric rings on fruits"],
+    "remedies": ["Prune infected branches", "Use fungicide sprays"]
+  },
+
+  "Apple___Cedar_apple_rust": {
+    "description": "Cedar apple rust is caused by Gymnosporangium juniperi-virginianae.",
+    "symptoms": ["Yellow-orange leaf spots", "Leaf deformation"],
+    "remedies": ["Remove nearby juniper hosts", "Apply fungicides"]
+  },
+
+  "Apple___healthy": {
+    "description": "The apple plant is healthy with no visible disease symptoms.",
+    "symptoms": ["Green leaves", "Normal growth"],
+    "remedies": ["Maintain proper nutrition", "Regular monitoring"]
+  },
+
+  "Blueberry___healthy": {
+    "description": "Healthy blueberry plant with no disease symptoms.",
+    "symptoms": ["Uniform green leaves"],
+    "remedies": ["Adequate watering", "Balanced fertilization"]
+  },
+
+  "Cherry_(including_sour)___Powdery_mildew": {
+    "description": "Powdery mildew is a fungal disease affecting cherry leaves.",
+    "symptoms": ["White powdery coating", "Leaf curling"],
+    "remedies": ["Apply sulfur fungicides", "Improve air circulation"]
+  },
+
+  "Cherry_(including_sour)___healthy": {
+    "description": "Healthy cherry plant with normal foliage.",
+    "symptoms": ["Bright green leaves"],
+    "remedies": ["Routine care"]
+  },
+
+  "Corn_(maize)___Cercospora_leaf_spot_Gray_leaf_spot": {
+    "description": "Gray leaf spot is caused by Cercospora fungi.",
+    "symptoms": ["Rectangular gray lesions", "Reduced photosynthesis"],
+    "remedies": ["Crop rotation", "Use resistant hybrids"]
+  },
+
+  "Corn_(maize)___Common_rust": {
+    "description": "Common rust is a fungal disease affecting maize.",
+    "symptoms": ["Reddish-brown pustules"],
+    "remedies": ["Use resistant varieties", "Fungicide application"]
+  },
+
+  "Corn_(maize)___Northern_Leaf_Blight": {
+    "description": "Northern leaf blight is caused by Exserohilum turcicum.",
+    "symptoms": ["Long gray lesions"],
+    "remedies": ["Crop rotation", "Resistant hybrids"]
+  },
+
+  "Corn_(maize)___healthy": {
+    "description": "Healthy maize plant.",
+    "symptoms": ["Green leaves"],
+    "remedies": ["Balanced fertilization"]
+  },
+
+  "Grape___Black_rot": {
+    "description": "Black rot is a fungal disease affecting grapevines.",
+    "symptoms": ["Brown leaf spots", "Shriveled berries"],
+    "remedies": ["Remove infected fruit", "Apply fungicides"]
+  },
+
+  "Grape___Esca_(Black_Measles)": {
+    "description": "Esca is a complex fungal disease affecting grapevines.",
+    "symptoms": ["Tiger-striped leaves", "Wood decay"],
+    "remedies": ["Remove infected vines", "Improve vineyard hygiene"]
+  },
+
+  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+    "description": "Leaf blight caused by Isariopsis fungi.",
+    "symptoms": ["Dark brown spots"],
+    "remedies": ["Fungicide sprays"]
+  },
+
+  "Grape___healthy": {
+    "description": "Healthy grapevine plant.",
+    "symptoms": ["Uniform green leaves"],
+    "remedies": ["Regular pruning"]
+  },
+
+  "Orange___Haunglongbing_(Citrus_greening)": {
+    "description": "Citrus greening is a bacterial disease spread by psyllids.",
+    "symptoms": ["Yellow shoots", "Misshapen fruits"],
+    "remedies": ["Remove infected trees", "Control insect vectors"]
+  },
+
+  "Peach___Bacterial_spot": {
+    "description": "Bacterial spot affects peach leaves and fruits.",
+    "symptoms": ["Dark spots", "Leaf drop"],
+    "remedies": ["Copper sprays"]
+  },
+
+  "Peach___healthy": {
+    "description": "Healthy peach plant.",
+    "symptoms": ["Normal green leaves"],
+    "remedies": ["Proper irrigation"]
+  },
+
+  "Pepper,_bell___Bacterial_spot": {
+    "description": "Bacterial spot affects pepper plants.",
+    "symptoms": ["Leaf spots", "Fruit lesions"],
+    "remedies": ["Use disease-free seeds"]
+  },
+
+  "Pepper,_bell___healthy": {
+    "description": "Healthy bell pepper plant.",
+    "symptoms": ["Green leaves"],
+    "remedies": ["Routine care"]
+  },
+
+  "Potato___Early_blight": {
+    "description": "Early blight is a fungal disease affecting potatoes.",
+    "symptoms": ["Brown concentric spots"],
+    "remedies": ["Crop rotation", "Fungicide use"]
+  },
+
+  "Potato___Late_blight": {
+    "description": "Late blight is a severe fungal disease.",
+    "symptoms": ["Dark water-soaked lesions"],
+    "remedies": ["Destroy infected plants"]
+  },
+
+  "Potato___healthy": {
+    "description": "Healthy potato plant.",
+    "symptoms": ["Green foliage"],
+    "remedies": ["Proper fertilization"]
+  },
+
+  "Raspberry___healthy": {
+    "description": "Healthy raspberry plant.",
+    "symptoms": ["Normal leaf color"],
+    "remedies": ["Regular care"]
+  },
+
+  "Soybean___healthy": {
+    "description": "Healthy soybean crop.",
+    "symptoms": ["Uniform green leaves"],
+    "remedies": ["Balanced nutrition"]
+  },
+
+  "Squash___Powdery_mildew": {
+    "description": "Powdery mildew affects squash leaves.",
+    "symptoms": ["White powdery patches"],
+    "remedies": ["Apply fungicide"]
+  },
+
+  "Strawberry___Leaf_scorch": {
+    "description": "Leaf scorch causes reddish-brown leaf spots in strawberries.",
+    "symptoms": ["Scorched leaf edges"],
+    "remedies": ["Remove affected leaves"]
+  },
+
+  "Strawberry___healthy": {
+    "description": "Healthy strawberry plant.",
+    "symptoms": ["Bright green leaves"],
+    "remedies": ["Proper irrigation"]
+  },
+
+  "Tomato___Bacterial_spot": {
+    "description": "Bacterial spot affects tomato leaves and fruits.",
+    "symptoms": ["Dark leaf spots"],
+    "remedies": ["Use copper fungicides"]
+  },
+
+  "Tomato___Early_blight": {
+    "description": "Early blight is a fungal disease in tomatoes.",
+    "symptoms": ["Concentric leaf spots"],
+    "remedies": ["Remove infected leaves"]
+  },
+
+  "Tomato___Late_blight": {
+    "description": "Late blight causes rapid plant collapse.",
+    "symptoms": ["Water-soaked lesions"],
+    "remedies": ["Destroy infected plants"]
+  },
+
+  "Tomato___Leaf_Mold": {
+    "description": "Leaf mold is caused by fungal infection in humid conditions.",
+    "symptoms": ["Yellow leaf patches"],
+    "remedies": ["Improve ventilation"]
+  },
+
+  "Tomato___Septoria_leaf_spot": {
+    "description": "Septoria leaf spot causes severe leaf damage.",
+    "symptoms": ["Small circular spots"],
+    "remedies": ["Fungicide sprays"]
+  },
+
+  "Tomato___Spider_mites_Two-spotted_spider_mite": {
+    "description": "Spider mites cause stippling and webbing.",
+    "symptoms": ["Yellow stippling"],
+    "remedies": ["Use insecticidal soap"]
+  },
+
+  "Tomato___Target_Spot": {
+    "description": "Target spot causes concentric lesions on tomato leaves.",
+    "symptoms": ["Target-like spots"],
+    "remedies": ["Apply fungicide"]
+  },
+
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "description": "A viral disease spread by whiteflies.",
+    "symptoms": ["Leaf curling", "Stunted growth"],
+    "remedies": ["Control whiteflies"]
+  },
+
+  "Tomato___Tomato_mosaic_virus": {
+    "description": "Mosaic virus causes mottled leaf appearance.",
+    "symptoms": ["Mosaic patterns"],
+    "remedies": ["Remove infected plants"]
+  },
+
+  "Tomato___healthy": {
+    "description": "Healthy tomato plant.",
+    "symptoms": ["Green leaves"],
+    "remedies": ["Proper care"]
+  }
+}

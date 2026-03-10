@@ -1,0 +1,3 @@
+Model,Validation Accuracy (%),Validation Loss
+CNN (From Scratch),59.423625469207764,1.4432532787322998
+InceptionV3 (Transfer Learning),81.41975998878479,0.583408772945404

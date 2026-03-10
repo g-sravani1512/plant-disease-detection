@@ -1,0 +1,4 @@
+CNN Accuracy: 0.5942362546920776
+InceptionV3 Accuracy: 0.8141975998878479
+CNN Correct Predictions: 6454
+Inception Correct Predictions: 8843

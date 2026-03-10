@@ -1,0 +1,12 @@
+Evaluation Summary – Plant Disease Detection
+
+CNN Model:
+- Validation Accuracy: ~59%
+- Used as baseline
+
+InceptionV3 Model:
+- Validation Accuracy: ~81%
+- Transfer learning significantly improved performance
+
+Conclusion:
+InceptionV3 outperformed the CNN baseline and was selected as the final model.

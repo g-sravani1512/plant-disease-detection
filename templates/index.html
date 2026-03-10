@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantCare AI - Plant Disease Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="{{ url_for('static', filename='images/icons/logo-leaf.svg') }}" alt="PlantCare AI Logo" class="logo-image">
+                <span class="logo-text">PlantCare AI</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#upload" class="nav-link">Scan</a></li>
+                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="/working" class="nav-link">Learn More</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Protect Your Plants with 
+                        <span class="highlight">AI-Powered Detection</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Identify plant diseases instantly using advanced deep learning technology. 
+                        Upload a photo and get expert diagnosis with treatment recommendations in seconds.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#upload" class="btn btn-primary">Start Free Scan</a>
+                        <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">80%+</div>
+                            <div class="stat-label">Accuracy</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">25+</div>
+                            <div class="stat-label">Diseases Detected</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">Instant</div>
+                            <div class="stat-label">Results</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="{{ url_for('static', filename='images/plants/healthy-leaf-hero.png') }}" alt="Healthy Plant" class="floating-image">
+                    <div class="hero-decoration">
+                        <div class="decoration-circle circle-1"></div>
+                        <div class="decoration-circle circle-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose PlantCare AI?</h2>
+                <p class="section-subtitle">Advanced technology for healthier plants</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="{{ url_for('static', filename='images/icons/ai-icon.png') }}" alt="AI Detection">
+                    </div>
+                    <h3>AI-Powered Detection</h3>
+                    <p>Advanced deep learning algorithms analyze your plant images with medical-grade precision.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="{{ url_for('static', filename='images/icons/speed-icon.png') }}" alt="Instant Results">
+                    </div>
+                    <h3>Instant Diagnosis</h3>
+                    <p>Get comprehensive results in seconds. No waiting, no complicated processes.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="{{ url_for('static', filename='images/icons/accuracy-icon.png') }}" alt="Treatment Guide">
+                    </div>
+                    <h3>Treatment Recommendations</h3>
+                    <p>Receive detailed remedies and preventive measures for every detected disease.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="{{ url_for('static', filename='images/icons/research-icon.png') }}" alt="CNN Model">
+                    </div>
+                    <h3>Research-Grade Technology</h3>
+                    <p>Built on InceptionV3 CNN architecture, trained on thousands of plant disease images.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section id="upload" class="upload-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Scan Your Plant</h2>
+                <p class="section-subtitle">Choose your preferred method to upload a leaf image</p>
+            </div>
+
+            <div class="upload-container">
+                <!-- File Upload Card with Real Plant Image -->
+                <div class="upload-card">
+                    <div class="upload-card-image">
+                        <img src="{{ url_for('static', filename='images/plants/healthy-leaf-1.jpg') }}" alt="Upload Leaf">
+                    </div>
+                    <div class="upload-card-content">
+                        <h3>Upload from Device</h3>
+                        <p>Select an image from your computer or mobile device</p>
+                        <input type="file" id="fileInput" accept="image/png, image/jpeg, image/jpg" hidden>
+                        <button class="btn btn-upload" onclick="document.getElementById('fileInput').click()">
+                            Choose Image
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Camera Capture Card with Real Plant Image -->
+                <div class="upload-card">
+                    <div class="upload-card-image">
+                        <img src="{{ url_for('static', filename='images/plants/mobile-scan.jpg') }}" alt="Camera Scan">
+                    </div>
+                    <div class="upload-card-content">
+                        <h3>Capture with Camera</h3>
+                        <p>Take a photo using your device camera</p>
+                        <button class="btn btn-upload" onclick="openCamera()">
+                            Open Camera
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camera Modal -->
+            <div id="cameraModal" class="modal">
+                <div class="modal-content camera-modal">
+                    <span class="close-btn" onclick="closeCamera()">&times;</span>
+                    <h3>Capture Leaf Image</h3>
+                    <div class="camera-container">
+                        <video id="cameraVideo" autoplay playsinline></video>
+                        <canvas id="cameraCanvas" hidden></canvas>
+                    </div>
+                    <div class="camera-controls">
+                        <button class="btn btn-primary" onclick="captureImage()">Capture Photo</button>
+                        <button class="btn btn-secondary" onclick="closeCamera()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Preview & Scanning (ENHANCED WITH OVERLAY ANIMATION) -->
+            <div id="imagePreviewContainer" class="preview-container" style="display: none;">
+                <div class="preview-card">
+                    <h3>Analyzing Your Plant</h3>
+                    <div class="image-scanner">
+                        <img id="previewImage" src="" alt="Preview">
+                        <!-- Scanner overlay with animated line -->
+                        <div class="scanner-overlay">
+                            <div id="scannerLine" class="scanner-line"></div>
+                            <div class="scanner-corners">
+                                <div class="corner corner-tl"></div>
+                                <div class="corner corner-tr"></div>
+                                <div class="corner corner-bl"></div>
+                                <div class="corner corner-br"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scanning-text">
+                        <span class="pulse-dot"></span>
+                        AI scanning in progress...
+                    </div>
+                    <div class="scanning-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="resultsContainer" class="results-container" style="display: none;">
+                <div class="result-card">
+                    <div class="result-header">
+                        <h2>Diagnosis Complete</h2>
+                        <span class="result-badge">✓ Analysis Complete</span>
+                    </div>
+
+                    <div class="result-content">
+                        <!-- Disease Name -->
+                        <div class="result-disease">
+                            <label>Detected Condition:</label>
+                            <h3 id="diseaseName">-</h3>
+                        </div>
+
+                        <!-- Confidence Chart -->
+                        <div class="confidence-section">
+                            <label>Confidence Score</label>
+                            <div class="donut-chart">
+                                <svg viewBox="0 0 200 200">
+                                    <circle class="donut-bg" cx="100" cy="100" r="80" />
+                                    <circle id="donutProgress" class="donut-progress" cx="100" cy="100" r="80" />
+                                </svg>
+                                <div class="donut-text">
+                                    <span id="confidenceValue">0</span>%
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div class="result-section">
+                            <h4>📋 Description</h4>
+                            <p id="diseaseDescription">-</p>
+                        </div>
+
+                        <!-- Symptoms -->
+                        <div class="result-section">
+                            <h4>⚠️ Symptoms</h4>
+                            <ul id="diseaseSymptoms" class="result-list"></ul>
+                        </div>
+
+                        <!-- Remedies -->
+                        <div class="result-section">
+                            <h4>💊 Recommended Treatment</h4>
+                            <ul id="diseaseRemedies" class="result-list"></ul>
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="result-actions">
+                            <button class="btn btn-primary" onclick="downloadPDF()">
+                                Download PDF Report
+                            </button>
+                            <button class="btn btn-secondary" onclick="resetScan()">
+                                Scan Another Plant
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Simple, fast, and accurate plant disease detection</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <img src="{{ url_for('static', filename='images/steps/upload-step.jpg') }}" alt="Upload">
+                    </div>
+                    <h3>Upload or Capture</h3>
+                    <p>Take a photo of the affected leaf or upload an existing image from your device.</p>
+                </div>
+
+                <div class="step-arrow">→</div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <img src="{{ url_for('static', filename='images/steps/analyze-step.jpg') }}" alt="Analyze">
+                    </div>
+                    <h3>AI Analysis</h3>
+                    <p>Our deep learning model analyzes the image using advanced pattern recognition.</p>
+                </div>
+
+                <div class="step-arrow">→</div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <img src="{{ url_for('static', filename='images/steps/results-step.jpg') }}" alt="Results">
+                    </div>
+                    <h3>Get Results</h3>
+                    <p>Receive instant diagnosis with detailed treatment recommendations and remedies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Instructions -->
+    <section id="instructions" class="instructions-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tips for Best Results</h2>
+                <p class="section-subtitle">Follow these guidelines for accurate detection</p>
+            </div>
+
+            <div class="instructions-grid">
+                <div class="instruction-card">
+                    <div class="instruction-image">
+                        <img src="{{ url_for('static', filename='images/plants/healthy-leaf-2.jpg') }}" alt="Single Leaf">
+                    </div>
+                    <div class="instruction-number">1</div>
+                    <h3>Single Leaf Only</h3>
+                    <p>Photograph one leaf at a time for accurate analysis</p>
+                </div>
+
+                <div class="instruction-card">
+                    <div class="instruction-image">
+                        <img src="{{ url_for('static', filename='images/plants/leaf-3.jpg') }}" alt="Clear Focus">
+                    </div>
+                    <div class="instruction-number">2</div>
+                    <h3>Clear Focus</h3>
+                    <p>Ensure the image is sharp and not blurry</p>
+                </div>
+
+                <div class="instruction-card">
+                    <div class="instruction-image">
+                        <img src="{{ url_for('static', filename='images/plants/leaf-4.jpg') }}" alt="Show Symptoms">
+                    </div>
+                    <div class="instruction-number">3</div>
+                    <h3>Show Symptoms</h3>
+                    <p>Capture clear images of affected areas</p>
+                </div>
+
+                <div class="instruction-card">
+                    <div class="instruction-image">
+                        <img src="{{ url_for('static', filename='images/plants/leaf-5.jpg') }}" alt="Good Lighting">
+                    </div>
+                    <div class="instruction-number">4</div>
+                    <h3>Good Lighting</h3>
+                    <p>Natural lighting works best for detection</p>
+                </div>
+
+                <div class="instruction-card">
+                    <div class="instruction-image">
+                        <img src="{{ url_for('static', filename='images/plants/leaf-6.jpg') }}" alt="Center Leaf">
+                    </div>
+                    <div class="instruction-number">5</div>
+                    <h3>Center the Leaf</h3>
+                    <p>Position the leaf in the center of the frame</p>
+                </div>
+
+                <div class="instruction-card">
+                    <div class="instruction-image">
+                        <img src="{{ url_for('static', filename='images/plants/pic6.png') }}" alt="AI Processing">
+                    </div>
+                    <div class="instruction-number">6</div>
+                    <h3>AI Processing</h3>
+                    <p>Our AI analyzes every detail for accurate results</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Plant Doctor Section -->
+    <section class="plant-doctor-section">
+        <div class="container">
+            <div class="doctor-grid">
+                <div class="doctor-content">
+                    <h2>Your Personal Plant Doctor in Your Pocket</h2>
+                    <p>Access expert plant disease diagnosis anytime, anywhere. Our AI-powered system provides professional-grade analysis that helps you save your plants before it's too late.</p>
+                    <ul class="doctor-features">
+                        <li>✓ 24/7 availability on any device</li>
+                        <li>✓ Instant expert-level diagnosis</li>
+                        <li>✓ Comprehensive treatment plans</li>
+                        <li>✓ Track plant health over time</li>
+                    </ul>
+                    <a href="#upload" class="btn btn-primary">Try It Now</a>
+                </div>
+                <div class="doctor-image">
+                    <img src="{{ url_for('static', filename='images/plants/mobile-scan.jpg') }}" alt="Mobile Plant Scanning">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about PlantCare AI</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3>How accurate is the AI detection?</h3>
+                    <p>Our system achieves over 95% accuracy in detecting plant diseases, trained on thousands of real-world plant images.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h3>What types of plants are supported?</h3>
+                    <p>We currently support 25+ common plant diseases across vegetables, fruits, and ornamental plants including tomatoes, apples, grapes, and more.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h3>Is my data private and secure?</h3>
+                    <p>Yes! Your uploaded images are processed securely and are not stored permanently. We respect your privacy.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h3>Can I use this offline?</h3>
+                    <p>Currently, PlantCare AI requires an internet connection for AI processing. Offline capabilities are coming soon!</p>
+                </div>
+
+                <div class="faq-card">
+                    <h3>How do I get the best results?</h3>
+                    <p>Use clear, well-lit photos of individual leaves showing symptoms. Follow our "Tips for Best Results" section for guidance.</p>
+                </div>
+
+                <div class="faq-card">
+                    <h3>What if the diagnosis is wrong?</h3>
+                    <p>While our AI is highly accurate, we recommend consulting with a local agricultural expert for final confirmation and treatment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="{{ url_for('static', filename='images/icons/logo-leaf.svg') }}" alt="PlantCare AI">
+                        <span>PlantCare AI</span>
+                    </div>
+                    <p>AI-powered plant disease detection for healthier plants and better yields.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="/working">Technology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#instructions">Guidelines</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PlantCare AI. Powered by Deep Learning & InceptionV3.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
