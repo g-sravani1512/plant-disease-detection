@@ -254,6 +254,39 @@ PLANT_DISEASE_DETECTION
 
 ---
 
+## 🌿 Project Demo
+
+<p align="center">
+  <b>Scanning Leaf</b>
+</p>
+
+<p align="center">
+  <img src="Demo_images/image1.png" alt="Scanning Leaf" width="800">
+</p>
+
+<br>
+
+<p align="center">
+  <b>Disease Detection Result</b>
+</p>
+
+<p align="center">
+  <img src="Demo_images/image2.png" alt="Prediction Result" width="800">
+</p>
+
+<br>
+
+<p align="center">
+  <b>Architecture</b>
+</p>
+
+<p align="center">
+  <img src="Demo_images/image3.png" alt="Architecture" width="800">
+</p>
+
+
+ ---
+
 # 👩‍💻 Author
 
 **Sravani G**
